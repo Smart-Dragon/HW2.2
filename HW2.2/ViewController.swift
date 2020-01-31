@@ -12,6 +12,10 @@ final class ViewController: UIViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var redTitleLabel: UILabel!
+    @IBOutlet weak var greenTitleLabel: UILabel!
+    @IBOutlet weak var blueTitleLabel: UILabel!
+    
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
@@ -36,8 +40,10 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
+        setupSuperView()
         setupColorView()
         setupLabels()
+        setupTitleLabels()
         setupTextFields()
         setupSliders()
         changeColor()
@@ -45,14 +51,29 @@ final class ViewController: UIViewController {
     
     // MARK: - Private Methods
     
+    private func setupSuperView() {
+        view.backgroundColor = #colorLiteral(red: 0, green: 0.3352792761, blue: 0.7432041952, alpha: 1)
+    }
+    
     private func setupColorView() {
         colorView.layer.cornerRadius = 20
     }
     
     private func setupLabels() {
-        redLabel.font = redLabel.font.withSize(defaultLabelSize)
-        greenLabel.font = greenLabel.font.withSize(defaultLabelSize)
-        blueLabel.font = blueLabel.font.withSize(defaultLabelSize)
+        setupLabel(redLabel)
+        setupLabel(greenLabel)
+        setupLabel(blueLabel)
+    }
+    
+    private func setupLabel(_ label: UILabel) {
+        label.font = label.font.withSize(defaultLabelSize)
+        label.textColor = .white
+    }
+    
+    private func setupTitleLabels() {
+        redTitleLabel.textColor = .white
+        greenTitleLabel.textColor = .white
+        blueTitleLabel.textColor = .white
     }
     
     private func setupTextFields() {
@@ -62,6 +83,7 @@ final class ViewController: UIViewController {
     }
     
     private func setupTextField(_ textField: UITextField) {
+        textField.backgroundColor = .white
         textField.keyboardType = .decimalPad
         textField.delegate = self
         textField.doneAccessory = true
@@ -75,6 +97,7 @@ final class ViewController: UIViewController {
     
     private func setupSlider(slider: UISlider, color: UIColor) {
         slider.minimumTrackTintColor = color
+        slider.maximumTrackTintColor = .lightGray
         slider.setValue(Float.random(in: 0.0..<1.0), animated: false)
     }
     
