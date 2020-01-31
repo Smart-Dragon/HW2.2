@@ -32,7 +32,7 @@ final class ViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private let defaultLabelSize: CGFloat = 14
+    private let digitalFont = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: UIFont.Weight.regular)
     
     // MARK: - Lifecycle
     
@@ -66,7 +66,7 @@ final class ViewController: UIViewController {
     }
     
     private func setupLabel(_ label: UILabel) {
-        label.font = label.font.withSize(defaultLabelSize)
+        label.font = digitalFont
         label.textColor = .white
     }
     
@@ -85,6 +85,8 @@ final class ViewController: UIViewController {
     private func setupTextField(_ textField: UITextField) {
         textField.backgroundColor = .white
         textField.keyboardType = .decimalPad
+        textField.textAlignment = .center
+        textField.font = digitalFont
         textField.delegate = self
         textField.doneAccessory = true
     }

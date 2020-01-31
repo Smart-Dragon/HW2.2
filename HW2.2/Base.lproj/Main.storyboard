@@ -28,7 +28,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5w-RW-zzG">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="uRS-fR-luh"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="uRS-fR-luh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -37,24 +37,24 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx5-NR-hZp">
                                                 <rect key="frame" x="65" y="0.0" width="40" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="W3i-TL-OMi"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="W3i-TL-OMi"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iSN-dX-D6c">
-                                                <rect key="frame" x="113" y="0.0" width="164" height="35"/>
+                                                <rect key="frame" x="113" y="0.0" width="152.5" height="35"/>
                                                 <connections>
                                                     <action selector="changeColorAction" destination="BYZ-38-t0r" eventType="valueChanged" id="hPl-uS-zFj"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6N-6u-OFT">
-                                                <rect key="frame" x="285" y="0.0" width="50" height="34"/>
+                                                <rect key="frame" x="273.5" y="0.0" width="61.5" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="qkk-lj-Tzn"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qkk-lj-Tzn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -65,7 +65,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCG-fb-pkD">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="xGg-dc-Tsh"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="xGg-dc-Tsh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -74,22 +74,22 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFH-OF-cDc">
                                                 <rect key="frame" x="65" y="0.0" width="40" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="DBv-hJ-CpW"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="DBv-hJ-CpW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dKO-Qg-x64">
-                                                <rect key="frame" x="113" y="0.0" width="164" height="35"/>
+                                                <rect key="frame" x="113" y="0.0" width="154" height="35"/>
                                                 <connections>
                                                     <action selector="changeColorAction" destination="BYZ-38-t0r" eventType="valueChanged" id="q3V-Q8-v31"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aiH-Iz-2uJ">
-                                                <rect key="frame" x="285" y="0.0" width="50" height="34"/>
+                                                <rect key="frame" x="275" y="0.0" width="60" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="9SY-7m-5Ed"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="9SY-7m-5Ed"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -102,7 +102,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGk-Qx-dnZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="ed0-N0-mam"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="ed0-N0-mam"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -111,22 +111,22 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-0E-uAg">
                                                 <rect key="frame" x="65" y="0.0" width="40" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="qAG-0e-PTc"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="qAG-0e-PTc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ctf-0N-oea">
-                                                <rect key="frame" x="113" y="0.0" width="164" height="35"/>
+                                                <rect key="frame" x="113" y="0.0" width="154" height="35"/>
                                                 <connections>
                                                     <action selector="changeColorAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Fhw-HW-1MG"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kca-zb-ELH">
-                                                <rect key="frame" x="285" y="0.0" width="50" height="34"/>
+                                                <rect key="frame" x="275" y="0.0" width="60" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="97n-EY-ydJ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="97n-EY-ydJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
