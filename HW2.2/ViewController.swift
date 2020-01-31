@@ -26,12 +26,19 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     
+    // MARK: - Private Properties
+    
+    private let defaultLabelSize: CGFloat = 14
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideKeyboardWhenTappedAround()
         setupColorView()
+        setupLabels()
+        setupTextFields()
         setupSliders()
         changeColor()
     }
@@ -40,6 +47,24 @@ final class ViewController: UIViewController {
     
     private func setupColorView() {
         colorView.layer.cornerRadius = 20
+    }
+    
+    private func setupLabels() {
+        redLabel.font = redLabel.font.withSize(defaultLabelSize)
+        greenLabel.font = greenLabel.font.withSize(defaultLabelSize)
+        blueLabel.font = blueLabel.font.withSize(defaultLabelSize)
+    }
+    
+    private func setupTextFields() {
+        setupTextField(redTextField)
+        setupTextField(greenTextField)
+        setupTextField(blueTextField)
+    }
+    
+    private func setupTextField(_ textField: UITextField) {
+        textField.keyboardType = .decimalPad
+        textField.delegate = self
+        textField.doneAccessory = true
     }
     
     private func setupSliders() {
@@ -77,6 +102,31 @@ final class ViewController: UIViewController {
         blueTextField.text = blueText
     }
     
+    private func changeSliderValue() {
+        guard let redField = redTextField.text else { return }
+        guard let greenField = greenTextField.text else { return }
+        guard let blueField = blueTextField.text else { return }
+        
+        if let red = Float(redField), let green = Float(greenField), let blue = Float(blueField)  {
+            redSlider.setValue(red, animated: true)
+            greenSlider.setValue(green, animated: true)
+            blueSlider.setValue(blue, animated: true)
+        }
+        else{
+            showError("Убедитесь, что вы вводите дробное число без ошибок")
+        }
+        
+        changeColor()
+    }
+    
+    private func showError(_ message: String) {
+        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .default)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
+    }
+    
     private func floatString(_ value: Float) -> String {
         return String(format: "%.2f", value)
     }
@@ -89,3 +139,12 @@ final class ViewController: UIViewController {
     
 }
 
+// MARK: - Text Field Delegate
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        changeSliderValue()
+    }
+    
+}
